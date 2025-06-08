@@ -1,0 +1,196 @@
+/* Custom styles for Academic Authenticity Detector */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    font-weight: bold;
+}
+
+.upload-area {
+    border: 3px dashed #007bff;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    background-color: #f0f8ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: #0056b3;
+    background-color: #e6f3ff;
+}
+
+.upload-area.dragover {
+    border-color: #28a745;
+    background-color: #e8f5e9;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper input[type=file] {
+    position: absolute;
+    left: -9999px;
+}
+
+.ai-score {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.ai-score.low {
+    color: #28a745;
+}
+
+.ai-score.medium {
+    color: #ffc107;
+}
+
+.ai-score.high {
+    color: #dc3545;
+}
+
+.similarity-matrix {
+    overflow-x: auto;
+}
+
+.similarity-matrix table {
+    min-width: 100%;
+}
+
+.similarity-cell {
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.similarity-low {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.similarity-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.similarity-high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.file-result-card {
+    border-left: 5px solid #007bff;
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.file-result-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.stats-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stats-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.text-preview {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-size: 0.9rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.tooltip-custom {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-custom .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-custom:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .upload-area {
+        padding: 2rem;
+    }
+    
+    .stats-card h3 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">AI Text Detection</h2>
+                <form action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="files" class="form-label">Upload PDF Files</label>
+                        <input type="file" class="form-control" id="files" name="files" multiple accept=".pdf">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Analyze</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
